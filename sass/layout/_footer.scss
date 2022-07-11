@@ -15,12 +15,8 @@
 
 .footer-section {
     background-color: var(--thirdly-background-color);
-        padding-top: 60px;
+    padding-top: 60px;
     padding-bottom: 60px;
-    @media screen and (min-width: 1200px) {
-        padding-top: 94px;
-        padding-bottom: 94px;
-    }
 }
 
 address {
@@ -60,10 +56,24 @@ address {
     flex-direction: column;
     width: 100%;
     gap: 60px;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 768px) {
+        display: flex;
         flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 60px;
+        align-content: center;
         align-items: flex-start;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
         gap: 0;
+        align-content: center;
+        align-items: flex-start;
     }
 }
 
@@ -88,9 +98,13 @@ address {
 
 .footer-soc {
     text-align: center;
+    @media screen and (min-width: 768px) {
+    padding-top: 5px;
+    margin-left: 165px;
+    }
     @media screen and (min-width: 1200px) {
     padding-top: 12px;
-    margin-right: 93px;
+    margin-left: 70px;
     text-align: left;
     }
 }
@@ -144,7 +158,6 @@ address {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
     & input {
             width: 100%;
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -160,7 +173,7 @@ address {
                 }
         }
     @media screen and (min-width: 1200px) {
-        gap: 15px;
+        gap: 0;
         flex-wrap: nowrap;
     }
 }
@@ -183,15 +196,15 @@ address {
 
 
 
-.footer-form label {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    min-width: 15px;
-    align-items: center;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-}
+// .footer-form label {
+//     font-weight: 400;
+//     font-size: 16px;
+//     line-height: 20px;
+//     min-width: 15px;
+//     align-items: center;
+//     letter-spacing: 0.03em;
+//     color: rgba(255, 255, 255, 0.6);
+// }
 
 // .footer-form input {
 //     margin-right: 12px;
@@ -206,10 +219,19 @@ address {
 //     color: white;
 // }
 
+.footer-form input {
+    @media screen and (max-width: 1199px) {
+            margin-bottom: 20px;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-right: 12px;
+        }
 
+}
 .footer-connect {
     @media screen and (min-width: 1200px) {
         padding-top: 12px;
+        margin-left: 93px;
     }
 }
 
@@ -220,8 +242,8 @@ address {
     text-transform: uppercase;
     line-height: 1.14;
     letter-spacing: 0.03em;
-    font-style: normal;
     margin-bottom: 20px;
+    font-style: normal;
     text-align: center;
     @media screen and (min-width: 1200px) {
             text-align: left;
@@ -244,11 +266,7 @@ address {
     fill: var(--accent-text-color);
 }
 
-.footer-mail {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+
 
 .footer-form input::placeholder {
     font-size: 16px;

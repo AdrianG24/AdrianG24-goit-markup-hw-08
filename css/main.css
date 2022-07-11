@@ -130,7 +130,7 @@ ul {
 }
 
 .buttons-list {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -139,11 +139,14 @@ ul {
 @media screen and (min-width: 768px) {
   .buttons-list {
     justify-content: center;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .buttons-list {
     justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
   }
 }
 
@@ -276,7 +279,7 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 561px;
+    max-width: 528px;
     width: 100%;
   }
 }
@@ -288,11 +291,12 @@ textarea {
 .section-form {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
   max-width: 370px;
 }
 @media screen and (min-width: 1200px) {
   .section-form {
-    width: 448px;
+    max-width: 448px;
   }
 }
 
@@ -302,6 +306,7 @@ textarea {
   line-height: 1.15;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .form-field {
@@ -387,19 +392,30 @@ textarea {
 }
 
 .form-checkbox label {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  margin-left: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .form-checkbox label {
+    margin-left: 8px;
+    font-size: 14px;
+  }
 }
 
 .form-checkbox a {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: underline;
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .form-checkbox a {
+    margin-left: 8px;
+    font-size: 14px;
+  }
 }
 
 .check-text {
@@ -451,10 +467,10 @@ textarea {
   font-weight: 700;
   font-size: 24px;
   line-height: 1.2;
-  padding-top: 16px;
-  padding-bottom: 16px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 @media screen and (min-width: 768px) {
   .logo {
@@ -462,6 +478,18 @@ textarea {
     font-size: 26px;
     line-height: 31px;
     letter-spacing: 0.03em;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
 
@@ -502,12 +530,21 @@ textarea {
 .site-nav-item {
   display: flex;
 }
+@media screen and (max-width: 767px) {
+  .site-nav-item {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav-item:last-child {
+    margin-bottom: 0px;
+  }
+}
 
 .site-nav-link {
   font-size: 40px;
   line-height: 1.17;
-  padding-top: 16px;
-  padding-bottom: 16px;
   text-decoration: none;
   position: relative;
   letter-spacing: 0.02em;
@@ -584,21 +621,18 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   .contact-item:first-child {
-    margin-right: 10px;
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .contact-item:first-child {
     margin-right: 30px;
-    margin-bottom: 0;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .contact-item {
-    padding-top: 16px;
-    padding-bottom: 16px;
+  .contact-item:last-child {
+    margin-bottom: 32px;
   }
 }
 
@@ -728,7 +762,20 @@ textarea {
     border-radius: 2px;
     position: absolute;
     left: 0;
-    bottom: -8px;
+    bottom: -34px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-nav-link-active:after {
+    content: "";
+    display: block;
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -32px;
   }
 }
 
@@ -747,7 +794,12 @@ textarea {
 }
 
 .hero-container {
-  padding: 200px 0px;
+  padding: 118px 0px;
+}
+@media screen and (min-width: 1200px) {
+  .hero-container {
+    padding: 200px 0px;
+  }
 }
 
 .hero-section {
@@ -987,6 +1039,11 @@ textarea {
 .team--title {
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .team--title {
+    margin-bottom: 50px;
+  }
+}
 
 .card-list {
   display: flex;
@@ -1160,12 +1217,6 @@ textarea {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-@media screen and (min-width: 1200px) {
-  .footer-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-}
 
 address {
   color: var(--accent-text-color);
@@ -1206,11 +1257,27 @@ address {
   width: 100%;
   gap: 60px;
 }
+@media screen and (min-width: 768px) {
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 60px;
+    align-content: center;
+    align-items: flex-start;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer-nav {
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
     gap: 0;
+    align-content: center;
+    align-items: flex-start;
   }
 }
 
@@ -1238,10 +1305,16 @@ address {
 .footer-soc {
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .footer-soc {
+    padding-top: 5px;
+    margin-left: 165px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer-soc {
     padding-top: 12px;
-    margin-right: 93px;
+    margin-left: 70px;
     text-align: left;
   }
 }
@@ -1281,7 +1354,6 @@ address {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
 }
 .footer-form input {
   width: 100%;
@@ -1301,24 +1373,26 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .footer-form {
-    gap: 15px;
+    gap: 0;
     flex-wrap: nowrap;
   }
 }
 
-.footer-form label {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  min-width: 15px;
-  align-items: center;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+@media screen and (max-width: 1199px) {
+  .footer-form input {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-form input {
+    margin-right: 12px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .footer-connect {
     padding-top: 12px;
+    margin-left: 93px;
   }
 }
 
@@ -1329,8 +1403,8 @@ address {
   text-transform: uppercase;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  font-style: normal;
   margin-bottom: 20px;
+  font-style: normal;
   text-align: center;
 }
 @media screen and (min-width: 1200px) {
@@ -1354,12 +1428,6 @@ address {
 .button-icon {
   margin-left: 10px;
   fill: var(--accent-text-color);
-}
-
-.footer-mail {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .footer-form input::placeholder {
